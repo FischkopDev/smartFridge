@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.home_skrobanek.fridge.controller.MainController">
+   <children>
+      <Pane prefHeight="616.0" prefWidth="265.0" style="-fx-background-color: darkgreen;">
+         <children>
+            <Label layoutX="63.0" layoutY="60.0" text="Smart Fridge" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Button fx:id="insertButton" layoutY="164.0" mnemonicParsing="false" onAction="#selectFridgeInput" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Kühlschrank einräumen" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="buyButton" disable="true" layoutY="232.0" mnemonicParsing="false" onAction="#selectListToBuy" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Einkauf" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="recipeButton" layoutY="266.0" mnemonicParsing="false" onAction="#selectReceipes" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Verfügbare Rezepte" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="settingsButton" layoutY="334.0" mnemonicParsing="false" onAction="#selectSettings" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Einstellungen" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="startButton" layoutY="130.0" mnemonicParsing="false" onAction="#selectStart" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" stylesheets="@../CSS/mainStyle.css" text="Startseite" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="viewButton" layoutY="198.0" mnemonicParsing="false" onAction="#selectFridge" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Kühlschrank anschauen" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="31.0" layoutY="564.0" text="Coding-Wettbewerb | Timo Skrobanek" textFill="WHITE" />
+            <Button fx:id="ownRecipeButton" layoutY="300.0" mnemonicParsing="false" onAction="#selectOwnRecipe" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Eigene Rezepte" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="server" layoutX="81.0" layoutY="525.0" text="Server ist online!" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="265.0" prefHeight="600.0" prefWidth="637.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

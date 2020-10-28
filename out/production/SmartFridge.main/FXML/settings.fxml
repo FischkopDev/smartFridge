@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="-10.0" prefHeight="115.0" prefWidth="667.0" style="-fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" text="Einstellungen" textFill="#13ae18">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="74.0" text="Du willst etwas ändern ? Dann fang hier an." />
+         </children>
+      </Pane>
+      <Pane layoutY="104.0" prefHeight="535.0" prefWidth="674.0" style="-fx-border-color: gray;">
+         <children>
+            <ChoiceBox layoutX="139.0" layoutY="72.0" prefWidth="150.0" />
+            <Label layoutX="62.0" layoutY="72.0" text="Sprache:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="31.0" text="Allgemein" textFill="#13ae18">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <CheckBox layoutX="70.0" layoutY="212.0" mnemonicParsing="false" selected="true" style="-fx-box-color: green;" text="Daten an Server schicken">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox layoutX="70.0" layoutY="244.0" mnemonicParsing="false" selected="true" text="Einstellungen auf dem Server speichern">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
+            <Label layoutX="14.0" layoutY="175.0" text="Daten" textFill="#13ae18">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="320.0" text="Account löschen" textFill="#13ae18">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="249.0" layoutY="363.0" mnemonicParsing="false" style="-fx-background-color: green; -fx-background-radius: 10;" text="Profil löschen" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="70.0" layoutY="363.0" text="Wenn du dir sicher bist :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

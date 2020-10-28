@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.home_skrobanek.fridge.controller.OwnRecipeController">
+   <children>
+      <Label layoutX="14.0" layoutY="38.0" text="Rezept erstellen" textFill="#13ae18">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="76.0" text="Alles was du zum Kochen wissen musst.">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextArea fx:id="description1" layoutX="42.0" layoutY="148.0" prefHeight="150.0" prefWidth="319.0" scrollLeft="5.0" scrollTop="5.0" />
+      <Button fx:id="uploadImage1" layoutX="475.0" layoutY="211.0" mnemonicParsing="false" style="-fx-background-color: #13ae18; -fx-background-radius: 10;" text="Bild hochladen" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="nextStep" layoutX="522.0" layoutY="561.0" mnemonicParsing="false" onAction="#nextStep" style="-fx-background-color: #13ae18; -fx-background-radius: 10;" text="Nächster Schritt" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="finish" layoutX="469.0" layoutY="561.0" mnemonicParsing="false" onAction="#uploadRecipe" style="-fx-background-color: #13ae18#13ae18; -fx-background-radius: 10;" text="Fertig" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="title" layoutX="42.0" layoutY="112.0" promptText="Titel" />
+      <TableView fx:id="foodTable" layoutX="42.0" layoutY="313.0" prefHeight="195.0" prefWidth="372.0" />
+      <TextField fx:id="food" layoutX="42.0" layoutY="508.0" prefHeight="25.0" prefWidth="136.0" promptText="Kartoffel" />
+      <TextField fx:id="foodAmount" layoutX="178.0" layoutY="508.0" prefHeight="25.0" prefWidth="117.0" promptText="5" />
+      <TextField fx:id="foodType" layoutX="296.0" layoutY="508.0" prefHeight="25.0" prefWidth="117.0" promptText="Stück" />
+      <Button layoutX="42.0" layoutY="533.0" mnemonicParsing="false" onAction="#addFood" style="-fx-background-color: #13ae18; -fx-background-radius: 10;" text="Einfügen" textFill="WHITE" />
+   </children>
+</Pane>

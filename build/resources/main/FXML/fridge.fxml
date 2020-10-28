@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.home_skrobanek.fridge.controller.FridgeController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Dein Kühlschrank" textFill="#13ae18">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="60.0" prefHeight="51.0" prefWidth="545.0" text="Hier siehst du den Inhalt von deinen Kühlschrank. &#10;Sofern du allles eingetragen hast.">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="81.0" layoutY="169.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="131.0" textFill="#13ae18">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="449.0" layoutY="377.0" mnemonicParsing="false" onAction="#loadFridge" style="-fx-background-color: #13ae18; -fx-background-radius: 25;" text="Nachschauen" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <ListView fx:id="list" layoutX="81.0" layoutY="131.0" prefHeight="283.0" prefWidth="362.0" />
+      <Label fx:id="isEmpty" layoutX="192.0" layoutY="493.0" text="Dein Kühlschrank ist leer" visible="false" />
+      <Label layoutX="81.0" layoutY="510.0" />
+      <StackedBarChart fx:id="stackedBar" layoutX="36.0" layoutY="418.0" prefHeight="184.0" prefWidth="585.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+   </children>
+</Pane>

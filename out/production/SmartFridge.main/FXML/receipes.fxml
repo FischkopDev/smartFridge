@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.home_skrobanek.fridge.controller.ReceipesController">
+   <children>
+      <Label layoutX="14.0" layoutY="38.0" text="Verfügbare Rezepte" textFill="#13ae18">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="76.0" text="Hier werden dir alle Rezepte angezeigt, die wir gespeichert haben.">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="317.0" text="Rezepte die du machen kannst" textFill="#13ae18">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="361.0" text="Hier kannst du Rezepte nachmachen und schauen, ob du alles dafür zuhause hast">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <ListView fx:id="listOnlineRecipe" layoutX="42.0" layoutY="101.0" prefHeight="200.0" prefWidth="349.0" />
+      <Button layoutX="400.0" layoutY="263.0" mnemonicParsing="false" onAction="#readRecipes" style="-fx-background-color: #13ae18; -fx-background-radius: 25;" text="Anzeigen" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <ListView fx:id="listOfRecipesWithNeeds" layoutX="42.0" layoutY="386.0" prefHeight="200.0" prefWidth="349.0" />
+      <Button layoutX="400.0" layoutY="551.0" mnemonicParsing="false" onAction="#readRecipesWithNeeds" style="-fx-background-color: #13ae18; -fx-background-radius: 25;" text="Anzeigen" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label fx:id="NoneFound" layoutX="42.0" layoutY="569.0" text="Es wurden keine Rezepte gefunden." textFill="RED" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

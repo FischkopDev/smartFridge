@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.home_skrobanek.fridge.controller.FridgeController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Dein Kühlschrank" textFill="#13ae18">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="60.0" prefHeight="51.0" prefWidth="545.0" text="Hier siehst du den Inhalt von deinen Kühlschrank. &#10;Sofern du allles eingetragen hast.">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="81.0" layoutY="169.0" text="Lade dafür unten die Liste einmal und schaue was im Kühlschrank ist">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="131.0" text="Anschauen" textFill="#13ae18">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="82.0" layoutY="489.0" mnemonicParsing="false" onAction="#loadFridge" style="-fx-background-color: #13ae18; -fx-background-radius: 25;" text="Nachschauen" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <ScrollBar fx:id="scrollbar" blockIncrement="15.0" layoutX="620.0" max="10.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="14.0" />
+      <ListView fx:id="list" layoutX="81.0" layoutY="197.0" prefHeight="283.0" prefWidth="362.0" />
+      <Label fx:id="isEmpty" layoutX="192.0" layoutY="493.0" text="Dein Kühlschrank ist leer" visible="false" />
+   </children>
+</Pane>
