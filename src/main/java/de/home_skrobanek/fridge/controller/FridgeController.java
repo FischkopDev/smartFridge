@@ -25,11 +25,6 @@ public class FridgeController {
 
     @FXML
     protected void loadFridge(){
-  /*      JSONArray array = fileManager.readFromJSON();
-
-        for(int i = 0; i < array.size(); i++) {
-            list.getItems().add(array.get(i));
-        }*/
         SmartFridge.client.sendMessage( new Datapackage("READ_FROM_FRIDGE", SmartFridge.USERNAME, SmartFridge.TMP_KEY));
     }
 

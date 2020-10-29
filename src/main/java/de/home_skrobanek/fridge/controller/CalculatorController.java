@@ -6,6 +6,9 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
+import java.io.UnsupportedEncodingException;
+
 /*
     Woman: 655,1 + (9,6 x Körpergewicht in kg) + (1,8 x Körpergröße in cm) – (4,7 x Alter in Jahren)
     Men: 66,47 + (13,7 x Körpergewicht in kg) + (5 x Körpergröße in cm) – (6,8 x Alter in Jahren)
@@ -27,15 +30,15 @@ public class CalculatorController {
 
     float normalValue;
 
-    public void initialize(){
-        gender.getItems().add("Männlich");
+    public void initialize() throws UnsupportedEncodingException {
+        gender.getItems().add(new String("Männlich".getBytes(),"UTF-8"));
         gender.getItems().add("Weiblich");
     }
 
     @FXML
     protected void calculate(){
         try {
-            if (gender.getSelectionModel().getSelectedItem().toString().equals("Männlich")) {
+            if (gender.getSelectionModel().getSelectedItem().toString().equals(new String("Männlich".getBytes(),"UTF-8"))) {
                 normalValue = 66.47f + (13.7f * Integer.parseInt(weight.getText())) +
                         (5f * Integer.parseInt(height.getText())) -
                         (6.8f * Integer.parseInt(old.getText()));
@@ -51,13 +54,15 @@ public class CalculatorController {
             bmi.setText("Dein BMI ist: " + bmiValue);
 
             if (doSport.isSelected())
-                value.setText("Dein Tagesbedarf is: " + (normalValue * 1.5f));//Average with perl factor
-            else
                 value.setText("Dein Tagesbedarf is: " + (normalValue * 1.7f));//Average with perl factor
+            else
+                value.setText("Dein Tagesbedarf is: " + (normalValue * 1.5f));//Average with perl factor
         }catch(NumberFormatException e){
             startAnimation();
         }catch(NullPointerException ex){
             startAnimation();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
     }
 

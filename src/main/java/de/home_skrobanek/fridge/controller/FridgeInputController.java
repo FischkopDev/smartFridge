@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 
+import java.io.UnsupportedEncodingException;
+
 public class FridgeInputController {
 
     @FXML
@@ -29,22 +31,22 @@ public class FridgeInputController {
     @FXML
     TextField nameInput, amountInput;
 
-    public void initialize() {
+    public void initialize() throws UnsupportedEncodingException {
 
         //values for the choiceboxes
         einheit.getItems().add("Gramm");
         einheit.getItems().add("Kilogramm");
-        einheit.getItems().add("Stück");
+        einheit.getItems().add(new String("Stück".getBytes(),"UTF-8"));
         einheit.getItems().add("Liter");
         einheit.getItems().add("Milliliter");
 
-        category.getItems().add("Getränke");
-        category.getItems().add("Obst/Gemüse");
-        category.getItems().add("Getreideprodukte");
-        category.getItems().add("Milchprodukte");
-        category.getItems().add("Fleich/Fisch");
-        category.getItems().add("Fette/Öle");
-        category.getItems().add("Süßwaren");
+        category.getItems().add(new String("Getränke".getBytes(),"UTF-8"));
+        category.getItems().add(new String("Obst/Gemüse".getBytes(),"UTF-8"));
+        category.getItems().add(new String("Getreideprodukte".getBytes(),"UTF-8"));
+        category.getItems().add(new String("Milchprodukte".getBytes(),"UTF-8"));
+        category.getItems().add(new String("Fleisch/Fisch".getBytes(),"UTF-8"));
+        category.getItems().add(new String("Fette/Öle".getBytes(),"UTF-8"));
+        category.getItems().add(new String("Süßwaren".getBytes(),"UTF-8"));
     }
 
     @FXML

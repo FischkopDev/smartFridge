@@ -8,7 +8,7 @@
 <h4>Einstellungen vorm Starten</h4>
 <p>Bevor der Client gestartet werden kann, müssen ein paar Einstellungen vorgenommen werden. Im Verzeichnis des Programmes
 finden Sie eine Config-Datei, worin enthalten istzu welcher Server IP und welchen Port das Programm verbinden soll.
-Sollte der Server auf demselben PC laufen, kann localhost stehen bleiben. Der Port ist standardmäßig auf 8001 gesetzt.</p>
+Sollte der Server auf demselben PC laufen, kann localhost stehen bleiben. Der Port ist standardmäßig auf 8000 gesetzt.</p>
 
 <h4>Starten des Clients</h4>
 <p>Nachdem die Einstellungen vorgenommen wurden, kann der Client über die Jar-Datei oder über die .exe ausgeführt werden.

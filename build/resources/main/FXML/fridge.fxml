@@ -40,5 +40,6 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </StackedBarChart>
+      <Label layoutX="81.0" layoutY="418.0" text="Prozentuale Verteilung:" />
    </children>
 </Pane>

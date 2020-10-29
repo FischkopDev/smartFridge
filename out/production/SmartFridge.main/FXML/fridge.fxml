@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -15,21 +16,30 @@
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Label layoutX="81.0" layoutY="169.0" text="Lade dafür unten die Liste einmal und schaue was im Kühlschrank ist">
+      <Label layoutX="81.0" layoutY="169.0">
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Label layoutX="14.0" layoutY="131.0" text="Anschauen" textFill="#13ae18">
+      <Label layoutX="14.0" layoutY="131.0" textFill="#13ae18">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <Button layoutX="82.0" layoutY="489.0" mnemonicParsing="false" onAction="#loadFridge" style="-fx-background-color: #13ae18; -fx-background-radius: 25;" text="Nachschauen" textFill="WHITE">
+      <Button layoutX="449.0" layoutY="377.0" mnemonicParsing="false" onAction="#loadFridge" style="-fx-background-color: #13ae18; -fx-background-radius: 25;" text="Nachschauen" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font></Button>
-      <ScrollBar fx:id="scrollbar" blockIncrement="15.0" layoutX="620.0" max="10.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="14.0" />
-      <ListView fx:id="list" layoutX="81.0" layoutY="197.0" prefHeight="283.0" prefWidth="362.0" />
+      <ListView fx:id="list" layoutX="81.0" layoutY="131.0" prefHeight="283.0" prefWidth="362.0" />
       <Label fx:id="isEmpty" layoutX="192.0" layoutY="493.0" text="Dein Kühlschrank ist leer" visible="false" />
+      <Label layoutX="81.0" layoutY="510.0" />
+      <StackedBarChart fx:id="stackedBar" layoutX="36.0" layoutY="418.0" prefHeight="184.0" prefWidth="585.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+      <Label layoutX="81.0" layoutY="418.0" text="Prozentuale Verteilung:" />
    </children>
 </Pane>

@@ -11,7 +11,7 @@
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="42.0" layoutY="76.0" text="Hier werden dir alle Rezepte angezeigt, die wir gespeichert haben.">
+      <Label layoutX="42.0" layoutY="76.0" text="Rezepte aus der Community! Doppelklick für Details">
          <font>
             <Font size="16.0" />
          </font></Label>
@@ -20,7 +20,7 @@
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="361.0" text="Hier kannst du Rezepte nachmachen und schauen, ob du alles dafür zuhause hast">
+      <Label layoutX="41.0" layoutY="361.0" text="Hier kannst du Rezepte nachmachen bei denen du die Zutaten hast.">
          <font>
             <Font size="16.0" />
          </font></Label>
@@ -29,12 +29,12 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-      <ListView fx:id="listOfRecipesWithNeeds" layoutX="42.0" layoutY="386.0" prefHeight="200.0" prefWidth="349.0" />
+      <ListView fx:id="listOfRecipesWithNeeds" layoutX="42.0" layoutY="384.0" prefHeight="200.0" prefWidth="349.0" />
       <Button layoutX="400.0" layoutY="551.0" mnemonicParsing="false" onAction="#readRecipesWithNeeds" style="-fx-background-color: #13ae18; -fx-background-radius: 25;" text="Anzeigen" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font></Button>
-      <Label fx:id="NoneFound" layoutX="42.0" layoutY="569.0" text="Es wurden keine Rezepte gefunden." textFill="RED" visible="false">
+      <Label fx:id="noneFound" layoutX="400.0" layoutY="476.0" text="Es wurden keine Rezepte gefunden." textFill="RED" visible="false">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

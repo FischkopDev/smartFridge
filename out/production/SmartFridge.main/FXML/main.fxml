@@ -22,11 +22,11 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="recipeButton" layoutY="266.0" mnemonicParsing="false" onAction="#selectReceipes" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Verfügbare Rezepte" textFill="WHITE">
+            <Button fx:id="recipeButton" layoutY="300.0" mnemonicParsing="false" onAction="#selectReceipes" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Verfügbare Rezepte" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="settingsButton" layoutY="334.0" mnemonicParsing="false" onAction="#selectSettings" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Einstellungen" textFill="WHITE">
+            <Button fx:id="settingsButton" layoutY="368.0" mnemonicParsing="false" onAction="#selectSettings" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Einstellungen" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
@@ -40,7 +40,7 @@
                </cursor>
             </Button>
             <Label layoutX="31.0" layoutY="564.0" text="Coding-Wettbewerb | Timo Skrobanek" textFill="WHITE" />
-            <Button fx:id="ownRecipeButton" layoutY="300.0" mnemonicParsing="false" onAction="#selectOwnRecipe" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Eigene Rezepte" textFill="WHITE">
+            <Button fx:id="ownRecipeButton" layoutY="334.0" mnemonicParsing="false" onAction="#selectOwnRecipe" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Eigene Rezepte" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -50,6 +50,11 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
+            <Button fx:id="calculator" layoutY="266.0" mnemonicParsing="false" onAction="#selectCalculator" prefHeight="34.0" prefWidth="265.0" style="-fx-background-color: darkgreen; -fx-alignment: center-left;" text="Bedarfsrechner" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </Pane>
       <Pane layoutX="265.0" prefHeight="600.0" prefWidth="637.0" style="-fx-background-color: white;" />

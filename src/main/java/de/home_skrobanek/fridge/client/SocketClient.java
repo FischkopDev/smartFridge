@@ -21,6 +21,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
 import java.awt.*;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -64,14 +65,20 @@ public class SocketClient extends Client {
                 ListView list = (ListView) SmartFridge.loginPane.lookup("#list");
                 ArrayList<Food> foodList = (ArrayList<Food>)datapackage.get(1);
 
+                list.getItems().clear();
                 //checking if fridge has food
                 if(!foodList.isEmpty()) {
 
                     loadStackedBar(foodList);
 
                     for (int i = 0; i < foodList.size(); i++) {
-                        list.getItems().add(foodList.get(i).getName() + " | " + foodList.get(i).getAmount() + " " +
-                                foodList.get(i).getType() + " | " + foodList.get(i).getCategory());
+                        try {
+                            list.getItems().add(new String(foodList.get(i).getName().getBytes(), "UTF-8") + " | " + foodList.get(i).getAmount() + " " +
+                                    new String(foodList.get(i).getType().getBytes(),"UTF-8") + " | " +
+                                    new String(foodList.get(i).getCategory().getBytes(), "UTF-8"));
+                        } catch (UnsupportedEncodingException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
                 else{
@@ -107,7 +114,9 @@ public class SocketClient extends Client {
                             list.getItems().clear();
 
                             for (int i = 0; i < ReceipesController.list.size(); i++) {
-                                list.getItems().add(ReceipesController.list.get(i).getName() + " | " + ReceipesController.list.get(i).getNeeds());
+                                    list.getItems().add(ReceipesController.list.get(i).getName()
+                                            + " | " + ReceipesController.list.get(i).getNeeds());
+
                             }
                         }
                         else{
@@ -144,7 +153,12 @@ public class SocketClient extends Client {
                             list.getItems().clear();
 
                             for (int i = 0; i < ReceipesController.list.size(); i++) {
-                                list.getItems().add(ReceipesController.list.get(i).getName() + " | " + ReceipesController.list.get(i).getNeeds());
+                                try {
+                                    list.getItems().add(new String(ReceipesController.list.get(i).getName().getBytes(),"UTF-8")
+                                            + " | " + new String(ReceipesController.list.get(i).getNeeds().getBytes(), "UTF-8"));
+                                } catch (UnsupportedEncodingException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
                         else{
@@ -228,21 +242,30 @@ public class SocketClient extends Client {
                 }
 
                 StackedBarChart stack = (StackedBarChart) SmartFridge.mainController.contentPane.lookup("#stackedBar");
-                ((CategoryAxis)stack.getXAxis()).setCategories(FXCollections.<String>observableArrayList(Arrays.asList(
-                        "Getraenke", "Obst/Gemuese", "Getreideprodukte", "Milchprodukte", "Fleisch/Fisch","Fette","Sueßwaren")));
+                try {
+                    ((CategoryAxis)stack.getXAxis()).setCategories(FXCollections.<String>observableArrayList(Arrays.asList(
+                            new String("Getränke".getBytes(),"UTF-8"),
+                            new String("Obst/Gemüse".getBytes(), "UTF-8"),
+                            new String("Getreideprodukte".getBytes(), "UTF-8"),
+                            new String("Milchprodukte".getBytes(),"UTF-8"),
+                            new String("Fleisch/Fisch".getBytes(),"UTF-8"),
+                            new String("Fette".getBytes(), "UTF-8"),new String("Süßwaren".getBytes(),"UTF-8"))));
 
-                System.out.println((float)(fruit*100)/ food.size());
-                XYChart.Series<String, Number> series1 = new XYChart.Series<>();
-                series1.setName("1800");
-                series1.getData().add(new XYChart.Data<>("Getraenke", (float)(drinks*100)/ food.size()));
-                series1.getData().add(new XYChart.Data<>("Obst/Gemuese", (float)(fruit*100)/ food.size()));
-                series1.getData().add(new XYChart.Data<>("Getreideprodukte", (grain*100)/ food.size()));
-                series1.getData().add(new XYChart.Data<>("Milchprodukte", (milk*100)/ food.size()));
-                series1.getData().add(new XYChart.Data<>("Fleisch/Fisch", (fish*100)/ food.size()));
-                series1.getData().add(new XYChart.Data<>("Fette", (fat*100)/ food.size()));
-                series1.getData().add(new XYChart.Data<>("Sueßwaren", (sweets*100)/ food.size()));
-                stack.getData().addAll(series1);
+                    System.out.println((float)((fruit*100)/ food.size()));
+                    XYChart.Series<String, Number> series1 = new XYChart.Series<>();
+                    series1.setName("Prozentualer Anteil");
+                    series1.getData().add(new XYChart.Data<>(new String("Getränke".getBytes(),"UTF-8"), (float)(drinks*100)/ food.size()));
+                    series1.getData().add(new XYChart.Data<>(new String("Obst/Gemüse".getBytes(), "UTF-8"), (float)(fruit*100)/ food.size()));
+                    series1.getData().add(new XYChart.Data<>(new String("Getreideprodukte".getBytes(), "UTF-8"), (grain*100)/ food.size()));
+                    series1.getData().add(new XYChart.Data<>(new String("Milchprodukte".getBytes(),"UTF-8"), (milk*100)/ food.size()));
+                    series1.getData().add(new XYChart.Data<>(new String("Fleisch/Fisch".getBytes(),"UTF-8"), (fish*100)/ food.size()));
+                    series1.getData().add(new XYChart.Data<>(new String("Fette/Öle".getBytes(), "UTF-8"), (fat*100)/ food.size()));
+                    series1.getData().add(new XYChart.Data<>(new String("Süßwaren".getBytes(),"UTF-8"), (sweets*100)/ food.size()));
+                    stack.getData().addAll(series1);
 
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
 
             }
         });

@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="637.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="637.0" style="-fx-background-color: white;" fx:controller="de.home_skrobanek.fridge.controller.DefaultController" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="18.0" layoutY="29.0" text="Startseite" textFill="#13ae18">
+      <Label layoutX="249.0" layoutY="115.0" text="Startseite" textFill="#13ae18">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="17.0" layoutY="325.0" text="Trends unter den Rezepten:" textFill="#13ae18">
+      <Label layoutX="95.0" layoutY="193.0" text="Mache deinen Kühlschrank intelligent und koche Rezepte die &#10;direkt aus der Community stammen.  Logge dich dafür einfach&#10;ein und werde Teil dieser Community" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="18.0" layoutY="160.0" text="In deinen Kühlschrank fehlt:" textFill="#13ae18">
+      <Button layoutX="269.0" layoutY="300.0" mnemonicParsing="false" onAction="#login" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: green; -fx-background-radius: 25;" text="Login" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font size="16.0" />
          </font>
-      </Label>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
    <opaqueInsets>
       <Insets top="1.0" />
